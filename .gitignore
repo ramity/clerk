@@ -1,0 +1,8 @@
+__pycache__
+
+data/gitlab/config/*
+data/gitlab/data/*
+data/gitlab/logs/*
+data/ollama/*
+
+!.gitkeep

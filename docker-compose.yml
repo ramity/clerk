@@ -1,0 +1,63 @@
+services:
+
+  clerk_rabbitmq:
+    image: rabbitmq:3.13.2-management
+    container_name: clerk_rabbitmq
+    ports:
+      - "5672:5672" # RabbitMQ port
+      - "15672:15672" # RabbitMQ management console
+    env_file:
+      - ./docker/rabbitmq/.env
+
+  clerk_redis:
+    image: redis:7.2-bookworm
+    container_name: clerk_redis
+    ports:
+      - "6379:6379" # Default Redis port
+
+  clerk_celery:
+    build:
+      context: ./
+      dockerfile: ./docker/celery/Dockerfile
+    container_name: clerk_celery
+    image: clerk_celery
+    # entrypoint: startup.bash
+    volumes:
+      - ./src/celery:/celery
+    depends_on:
+      - clerk_rabbitmq
+      - clerk_redis
+    env_file:
+      - ./docker/celery/.env
+
+  clerk_ollama:
+    image: ollama/ollama:latest
+    container_name: clerk_ollama
+    ports:
+      - 11434:11434
+    volumes:
+      - ./data/ollama:/root/.ollama
+    # entrypoint: ollama pull MODEL && ollama serve MODEL
+
+  clerk_gitlab:
+    image: gitlab/gitlab-ce:17.0.0-ce.0
+    container_name: clerk_gitlab
+    restart: always
+    hostname: '192.168.1.2'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://192.168.1.2'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2424
+    ports:
+      - '80:80'
+      - '443:443'
+      - '2424:22'
+    volumes:
+      - './data/gitlab/config:/etc/gitlab'
+      - './data/gitlab/logs:/var/log/gitlab'
+      - './data/gitlab/data:/var/opt/gitlab'
+    shm_size: '256m'
+
+networks:
+  default:
+    name: clerk_network
