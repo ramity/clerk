@@ -5,4 +5,6 @@ data/gitlab/data/*
 data/gitlab/logs/*
 data/ollama/*
 
+.env
+
 !.gitkeep

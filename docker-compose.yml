@@ -15,15 +15,29 @@ services:
     ports:
       - "6379:6379" # Default Redis port
 
+  clerk_ingest:
+    build:
+      context: ./
+      dockerfile: ./docker/ingest/Dockerfile
+    container_name: clerk_ingest
+    image: clerk_ingest
+    volumes:
+      - ./src/ingest:/ingest
+    depends_on:
+      - clerk_celery
+    env_file:
+      - ./docker/ingest/.env
+    ports:
+      - "5000:5000"
+
   clerk_celery:
     build:
       context: ./
-      dockerfile: ./docker/celery/Dockerfile
+      dockerfile: ./docker/ingest/Dockerfile
     container_name: clerk_celery
     image: clerk_celery
-    # entrypoint: startup.bash
     volumes:
-      - ./src/celery:/celery
+      - ./src/ingest:/celery
     depends_on:
       - clerk_rabbitmq
       - clerk_redis
@@ -43,20 +57,20 @@ services:
     image: gitlab/gitlab-ce:17.0.0-ce.0
     container_name: clerk_gitlab
     restart: always
-    hostname: '192.168.1.2'
+    hostname: "192.168.1.2"
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://192.168.1.2'
-        gitlab_rails['gitlab_shell_ssh_port'] = 2424
+        external_url "http://192.168.1.2"
+        gitlab_rails["gitlab_shell_ssh_port"] = 2424
     ports:
-      - '80:80'
-      - '443:443'
-      - '2424:22'
+      - "80:80"
+      - "443:443"
+      - "2424:22"
     volumes:
-      - './data/gitlab/config:/etc/gitlab'
-      - './data/gitlab/logs:/var/log/gitlab'
-      - './data/gitlab/data:/var/opt/gitlab'
-    shm_size: '256m'
+      - "./data/gitlab/config:/etc/gitlab"
+      - "./data/gitlab/logs:/var/log/gitlab"
+      - "./data/gitlab/data:/var/opt/gitlab"
+    shm_size: "256m"
 
 networks:
   default:

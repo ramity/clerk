@@ -1,6 +1,6 @@
 FROM ubuntu:jammy
 
-WORKDIR /celery
+WORKDIR /ingest
 
 # Get latest apt updates and upgrades
 RUN apt update
@@ -15,5 +15,6 @@ RUN python3 -m venv /env
 # Install pip packages and deps
 RUN /env/bin/pip install --upgrade pip
 RUN /env/bin/pip install celery[librabbitmq,redis,auth,msgpack]
+RUN /env/bin/pip install Flask
 
-ENTRYPOINT celery -A tasks worker --loglevel=INFO
+ENTRYPOINT /env/bin/python server.py 
