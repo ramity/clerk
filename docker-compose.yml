@@ -33,7 +33,7 @@ services:
   clerk_celery:
     build:
       context: ./
-      dockerfile: ./docker/ingest/Dockerfile
+      dockerfile: ./docker/celery/Dockerfile
     container_name: clerk_celery
     image: clerk_celery
     volumes:
@@ -43,6 +43,21 @@ services:
       - clerk_redis
     env_file:
       - ./docker/celery/.env
+  
+  clerk_flower:
+    build:
+      context: ./
+      dockerfile: ./docker/flower/Dockerfile
+    container_name: clerk_flower
+    ports:
+      - 5555:5555
+    image: clerk_flower
+    volumes:
+      - ./src/ingest:/flower
+    depends_on:
+      - clerk_celery
+    env_file:
+      - ./docker/flower/.env
 
   clerk_ollama:
     image: ollama/ollama:latest
