@@ -60,13 +60,15 @@ services:
       - ./docker/flower/.env
 
   clerk_ollama:
-    image: ollama/ollama:latest
+    build:
+      context: ./
+      dockerfile: ./docker/ollama/Dockerfile
     container_name: clerk_ollama
+    image: clerk_ollama
     ports:
       - 11434:11434
     volumes:
       - ./data/ollama:/root/.ollama
-    # entrypoint: ollama pull MODEL && ollama serve MODEL
 
   clerk_gitlab:
     image: gitlab/gitlab-ce:17.0.0-ce.0

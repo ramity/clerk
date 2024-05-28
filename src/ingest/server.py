@@ -27,4 +27,4 @@ def webhook_ingest():
 
     return jsonify({"error": "event not supported"})
 
-flask.run(host="0.0.0.0")
+flask.run(host="0.0.0.0", debug=True)
