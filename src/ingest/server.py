@@ -1,6 +1,6 @@
 import os
 from flask import Flask, request, jsonify
-from tasks import celery, add
+from tasks import celery, ingest_issue_event
 
 flask = Flask(__name__)
 
@@ -13,8 +13,6 @@ def webhook_ingest():
     if not token:
         return jsonify({"error": "{token}"})
 
-    print(token)
-
     # Reject if token is not valid
     if token != os.getenv("TOKEN"):
         return jsonify({"error": "token"})
@@ -22,7 +20,7 @@ def webhook_ingest():
     event = request.headers.get("X-Gitlab-Event")
 
     if event == "Issue Hook":
-        task = add.delay(2, 3)
+        task = ingest_issue_event.delay(request.json)
         return jsonify({"created": task.id})
 
     return jsonify({"error": "event not supported"})

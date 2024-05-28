@@ -16,5 +16,6 @@ RUN python3 -m venv /env
 RUN /env/bin/pip install --upgrade pip
 RUN /env/bin/pip install celery[librabbitmq,redis,auth,msgpack]
 RUN /env/bin/pip install Flask
+RUN /env/bin/pip install requests
 
 ENTRYPOINT /env/bin/python server.py 
