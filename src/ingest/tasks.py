@@ -31,3 +31,5 @@ def ingest_issue_event(event):
     # TODO - Validate the response
 
     # TODO - Do something with issue_description_lines
+
+    return True
