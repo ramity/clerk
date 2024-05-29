@@ -1,11 +1,17 @@
 import os
 from flask import Flask, request, jsonify
 from tasks import celery, ingest_issue_event
+import logging
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename="debug.log", encoding="utf-8", level=logging.DEBUG)
 
 flask = Flask(__name__)
 
 @flask.route("/ingest", methods=["POST"])
 def webhook_ingest():
+
+    logger.debug(request.json)
 
     token = request.headers["X-Gitlab-Token"]
 
