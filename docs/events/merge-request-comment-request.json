@@ -1,0 +1,248 @@
+{
+    "object_kind": "note",
+    "event_type": "note",
+    "user": {
+        "id": 1,
+        "name": "Administrator",
+        "username": "root",
+        "avatar_url": "https: //www.gravatar.com/avatar/f618caa88fda692b25db43d4acc0cc2124c1dce2a00efb3ba4d33b5aecbc6b00?s=80&d=identicon",
+        "email": "[REDACTED]"
+    },
+    "project_id": 1,
+    "project": {
+        "id": 1,
+        "name": "test",
+        "description": "",
+        "web_url": "http://192.168.1.2/root/test",
+        "avatar_url": None,
+        "git_ssh_url": "ssh://git@192.168.1.2:2424/root/test.git",
+        "git_http_url": "http://192.168.1.2/root/test.git",
+        "namespace": "Administrator",
+        "visibility_level": 0,
+        "path_with_namespace": "root/test",
+        "default_branch": "master",
+        "ci_config_path": None,
+        "homepage": "http://192.168.1.2/root/test",
+        "url": "ssh://git@192.168.1.2:2424/root/test.git",
+        "ssh_url": "ssh://git@192.168.1.2:2424/root/test.git",
+        "http_url": "http://192.168.1.2/root/test.git"
+    },
+    "object_attributes": {
+        "attachment": None,
+        "author_id": 1,
+        "change_position": {
+            "base_sha": None,
+            "start_sha": None,
+            "head_sha": None,
+            "old_path": None,
+            "new_path": None,
+            "position_type": "text",
+            "old_line": None,
+            "new_line": None,
+            "line_range": None
+        },
+        "commit_id": None,
+        "created_at": "2024-05-29 04:51:12 UTC",
+        "discussion_id": "e71edd6b61de6ca31767cb826483710f8f3b8687",
+        "id": 698,
+        "line_code": "b5d0a2b41bb55af461c854269243241e1c5f0843_0_19",
+        "note": "THIS IS A COMMENT ON THE 19TH LINE OF dolores_eos_et_sint_molestiae_omnis_corrupti_0.md",
+        "noteable_id": 30,
+        "noteable_type": "MergeRequest",
+        "original_position": {
+            "base_sha": "27329d3afac51fbf2762428e12f2635d1137c549",
+            "start_sha": "27329d3afac51fbf2762428e12f2635d1137c549",
+            "head_sha": "d49703b85913ee7a8c85e1893057ef4cdb06ff85",
+            "old_path": "dolores_eos_et_sint_molestiae_omnis_corrupti_0.md",
+            "new_path": "dolores_eos_et_sint_molestiae_omnis_corrupti_0.md",
+            "position_type": "text",
+            "old_line": None,
+            "new_line": 19,
+            "line_range": {
+                "start": {
+                    "line_code": "b5d0a2b41bb55af461c854269243241e1c5f0843_0_19",
+                    "type": "new",
+                    "old_line": None,
+                    "new_line": 19
+                },
+                "end": {
+                    "line_code": "b5d0a2b41bb55af461c854269243241e1c5f0843_0_19",
+                    "type": "new",
+                    "old_line": None,
+                    "new_line": 19
+                }
+            }
+        },
+        "position": {
+            "base_sha": "27329d3afac51fbf2762428e12f2635d1137c549",
+            "start_sha": "27329d3afac51fbf2762428e12f2635d1137c549",
+            "head_sha": "d49703b85913ee7a8c85e1893057ef4cdb06ff85",
+            "old_path": "dolores_eos_et_sint_molestiae_omnis_corrupti_0.md",
+            "new_path": "dolores_eos_et_sint_molestiae_omnis_corrupti_0.md",
+            "position_type": "text",
+            "old_line": None,
+            "new_line": 19,
+            "line_range": {
+                "start": {
+                    "line_code": "b5d0a2b41bb55af461c854269243241e1c5f0843_0_19",
+                    "type": "new",
+                    "old_line": None,
+                    "new_line": 19
+                },
+                "end": {
+                    "line_code": "b5d0a2b41bb55af461c854269243241e1c5f0843_0_19",
+                    "type": "new",
+                    "old_line": None,
+                    "new_line": 19
+                }
+            }
+        },
+        "project_id": 1,
+        "resolved_at": None,
+        "resolved_by_id": None,
+        "resolved_by_push": None,
+        "st_diff": None,
+        "system": False,
+        "type": "DiffNote",
+        "updated_at": "2024-05-29 04:51:12 UTC",
+        "updated_by_id": None,
+        "description": "THIS IS A COMMENT ON THE 19TH LINE OF dolores_eos_et_sint_molestiae_omnis_corrupti_0.md",
+        "url": "http://192.168.1.2/root/test/-/merge_requests/30#note_698",
+        "action": "create"
+    },
+    "repository": {
+        "name": "test",
+        "url": "ssh://git@192.168.1.2:2424/root/test.git",
+        "description": "",
+        "homepage": "http://192.168.1.2/root/test"
+    },
+    "merge_request": {
+        "assignee_id": None,
+        "author_id": 1,
+        "created_at": "2021-02-15 15:55:38 UTC",
+        "description": "##### Voluptatum\nPorro et quo. Laborum molestias ducimus. Labore dolorum adipisci. Quisquam est quis. Sint accusamus maxime.\n* Veritatis. \n* Eos. \n* Adipisci. \n* Quibusdam. \n* Sint. \n* Consequuntur. \n* Hic. \n* Voluptate. \n* Velit.",
+        "draft": False,
+        "head_pipeline_id": None,
+        "id": 30,
+        "iid": 30,
+        "last_edited_at": None,
+        "last_edited_by_id": None,
+        "merge_commit_sha": None,
+        "merge_error": None,
+        "merge_params": {
+            "force_remove_source_branch": None
+        },
+        "merge_status": "can_be_merged",
+        "merge_user_id": None,
+        "merge_when_pipeline_succeeds": False,
+        "milestone_id": None,
+        "source_branch": "laudantium-unde-et-iste-et",
+        "source_project_id": 1,
+        "state_id": 1,
+        "target_branch": "master",
+        "target_project_id": 1,
+        "time_estimate": 0,
+        "title": "Id blanditiis consequatur ut.",
+        "updated_at": "2024-05-29 04:51:12 UTC",
+        "updated_by_id": None,
+        "prepared_at": None,
+        "assignee_ids": [],
+        "blocking_discussions_resolved": True,
+        "detailed_merge_status": "mergeable",
+        "first_contribution": True,
+        "human_time_change": None,
+        "human_time_estimate": None,
+        "human_total_time_spent": None,
+        "labels": [
+            {
+                "id": 26,
+                "title": "asperiores-ex",
+                "color": "#72e70a",
+                "project_id": 1,
+                "created_at": "2021-02-15 15:54:02 UTC",
+                "updated_at": "2021-02-15 15:54:02 UTC",
+                "template": False,
+                "description": None,
+                "type": "ProjectLabel",
+                "group_id": None
+            },
+            {
+                "id": 14,
+                "title": "quidem-labore",
+                "color": "#6b2c61",
+                "project_id": 1,
+                "created_at": "2021-02-15 15:54:02 UTC",
+                "updated_at": "2021-02-15 15:54:02 UTC",
+                "template": False,
+                "description": None,
+                "type": "ProjectLabel",
+                "group_id": None
+            },
+            {
+                "id": 6,
+                "title": "sed-consequuntur",
+                "color": "#01f0f8",
+                "project_id": 1,
+                "created_at": "2021-02-15 15:54:01 UTC",
+                "updated_at": "2021-02-15 15:54:01 UTC",
+                "template": False,
+                "description": None,
+                "type": "ProjectLabel",
+                "group_id": None
+            }
+        ],
+        "last_commit": {
+            "id": "d49703b85913ee7a8c85e1893057ef4cdb06ff85",
+            "message": "Modi fugiat quasi sint.",
+            "title": "Modi fugiat quasi sint.",
+            "timestamp": "2021-02-15T15:55:35+00:00",
+            "url": "http://192.168.1.2/root/test/-/commit/d49703b85913ee7a8c85e1893057ef4cdb06ff85",
+            "author": {
+                "name": "Administrator",
+                "email": "admin@example.com"
+            }
+        },
+        "reviewer_ids": [],
+        "source": {
+            "id": 1,
+            "name": "test",
+            "description": "",
+            "web_url": "http://192.168.1.2/root/test",
+            "avatar_url": None,
+            "git_ssh_url": "ssh://git@192.168.1.2:2424/root/test.git",
+            "git_http_url": "http://192.168.1.2/root/test.git",
+            "namespace": "Administrator",
+            "visibility_level": 0,
+            "path_with_namespace": "root/test",
+            "default_branch": "master",
+            "ci_config_path": None,
+            "homepage": "http://192.168.1.2/root/test",
+            "url": "ssh://git@192.168.1.2:2424/root/test.git",
+            "ssh_url": "ssh://git@192.168.1.2:2424/root/test.git",
+            "http_url": "http://192.168.1.2/root/test.git"
+        },
+        "state": "opened",
+        "target": {
+            "id": 1,
+            "name": "test",
+            "description": "",
+            "web_url": "http://192.168.1.2/root/test",
+            "avatar_url": None,
+            "git_ssh_url": "ssh://git@192.168.1.2:2424/root/test.git",
+            "git_http_url": "http://192.168.1.2/root/test.git",
+            "namespace": "Administrator",
+            "visibility_level": 0,
+            "path_with_namespace": "root/test",
+            "default_branch": "master",
+            "ci_config_path": None,
+            "homepage": "http://192.168.1.2/root/test",
+            "url": "ssh://git@192.168.1.2:2424/root/test.git",
+            "ssh_url": "ssh://git@192.168.1.2:2424/root/test.git",
+            "http_url": "http://192.168.1.2/root/test.git"
+        },
+        "time_change": 0,
+        "total_time_spent": 0,
+        "url": "http://192.168.1.2/root/test/-/merge_requests/30",
+        "work_in_progress": False
+    }
+}
