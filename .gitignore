@@ -9,4 +9,4 @@ data/ollama/*
 
 !.gitkeep
 
-.log
+*.log
