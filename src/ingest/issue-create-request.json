@@ -1,0 +1,110 @@
+{
+    "object_kind": "issue",
+    "event_type": "issue",
+    "user": {
+        "id": 1,
+        "name": "Administrator",
+        "username": "root",
+        "avatar_url": "https://www.gravatar.com/avatar/f618caa88fda692b25db43d4acc0cc2124c1dce2a00efb3ba4d33b5aecbc6b00?s=80&d=identicon",
+        "email": "[REDACTED]"
+    },
+    "project": {
+        "id": 1,
+        "name": "test",
+        "description": "",
+        "web_url": "http://192.168.1.2/root/test",
+        "avatar_url": "None",
+        "git_ssh_url": "ssh://git@192.168.1.2:2424/root/test.git",
+        "git_http_url": "http://192.168.1.2/root/test.git",
+        "namespace": "Administrator",
+        "visibility_level": 0,
+        "path_with_namespace": "root/test",
+        "default_branch": "master",
+        "ci_config_path": "None",
+        "homepage": "http://192.168.1.2/root/test",
+        "url": "ssh://git@192.168.1.2:2424/root/test.git",
+        "ssh_url": "ssh://git@192.168.1.2:2424/root/test.git",
+        "http_url": "http://192.168.1.2/root/test.git"
+    },
+    "object_attributes": {
+        "author_id": 1,
+        "closed_at": "None",
+        "confidential": "False",
+        "created_at": "2024-05-29 04:47:52 UTC",
+        "description": "This is totally a test",
+        "discussion_locked": "None",
+        "due_date": "None",
+        "id": 33,
+        "iid": 33,
+        "last_edited_at": "None",
+        "last_edited_by_id": "None",
+        "milestone_id": "None",
+        "moved_to_id": "None",
+        "duplicated_to_id": "None",
+        "project_id": 1,
+        "relative_position": "None",
+        "state_id": 1,
+        "time_estimate": 0,
+        "title": "ANOTHER TEST :)",
+        "updated_at": "2024-05-29 04:47:52 UTC",
+        "updated_by_id": "None",
+        "url": "http://192.168.1.2/root/test/-/issues/33",
+        "total_time_spent": 0,
+        "time_change": 0,
+        "human_total_time_spent": "None",
+        "human_time_change": "None",
+        "human_time_estimate": "None",
+        "assignee_ids": [],
+        "assignee_id": "None",
+        "labels": [],
+        "state": "opened",
+        "severity": "unknown",
+        "customer_relations_contacts": [],
+        "action": "open"
+    },
+    "labels": [],
+    "changes": {
+        "author_id": {
+            "previous": "None",
+            "current": 1
+        },
+        "created_at": {
+            "previous": "None",
+            "current": "2024-05-29 04:47:52 UTC"
+        },
+        "description": {
+            "previous": "None",
+            "current": "This is totally a test"
+        },
+        "id": {
+            "previous": "None",
+            "current": 33
+        },
+        "iid": {
+            "previous": "None",
+            "current": 33
+        },
+        "project_id": {
+            "previous": "None",
+            "current": 1
+        },
+        "time_estimate": {
+            "previous": "None",
+            "current": 0
+        },
+        "title": {
+            "previous": "None",
+            "current": "ANOTHER TEST :)"
+        },
+        "updated_at": {
+            "previous": "None",
+            "current": "2024-05-29 04:47:52 UTC"
+        }
+    },
+    "repository": {
+        "name": "test",
+        "url": "ssh://git@192.168.1.2:2424/root/test.git",
+        "description": "",
+        "homepage": "http://192.168.1.2/root/test"
+    }
+}
