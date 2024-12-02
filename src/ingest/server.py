@@ -12,7 +12,6 @@ flask = Flask(__name__)
 def webhook_ingest():
 
     logger.debug(request.json)
-
     token = request.headers["X-Gitlab-Token"]
 
     # Reject if token not present
