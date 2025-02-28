@@ -6,8 +6,5 @@ WORKDIR /root/.ollama
 RUN apt update
 RUN apt upgrade -y
 
-# Start ollama serve and disown
-RUN ollama serve & disown
-RUN ollama pull qwen2.5-coder:3b
-
-ENTRYPOINT sleep infinity
+ADD docker/ollama/init.bash /tmp/init.bash
+ENTRYPOINT /tmp/init.bash
